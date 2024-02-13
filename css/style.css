@@ -680,8 +680,12 @@ body {
 
 .conquer__title-block {
     justify-content: start;
-    padding-bottom: 100px;
-    padding-bottom: 5.2083vw;
+    padding-bottom: 100px; 
+}
+@media (max-width: 1240px) {
+    .conquer__title-block {
+        padding-bottom: 5.2083vw;
+    }
 }
 @media (max-width: 1240px) {
     .conquer__title-block {
@@ -690,7 +694,12 @@ body {
 }
 
 .conquer__text {
-    padding: 0px 4.7916vw 0px 0px;
+    padding: 0px 92px 0px 0px;
+}
+@media (max-width: 1920px) {
+    .conquer__text {
+        padding: 0px 4.7916vw 0px 0px;
+    }
 }
 @media (max-width: 767px) {
     .conquer__text {
@@ -703,7 +712,7 @@ body {
     font-family: "Roboto Condensed";
     font-size: 14px;
     font-weight: 300;
-    line-height: 18px; /* 128.571% */
+    line-height: 18px;
     letter-spacing: 0.6px;
 }
 @media (max-width: 767px) {
@@ -737,20 +746,21 @@ body {
 /* --------------------------------------------------------- */
 
 .gallery {
-}
-
-.gallery__container {
     padding-bottom: 200px;
 }
-@media (max-width: 1200px) {
-    .gallery__container {
-        padding-bottom: 16.6666vw;
+@media (max-width: 1920px) {
+    .gallery{
+        padding-bottom: 10.4166vw;
     }
 }
 
 .gallery__title-block {
     margin-bottom: 212px;
-    margin-bottom: 11.0416vw;
+}
+@media (max-width: 1920px) {
+    .gallery__title-block {
+        margin-bottom: 11.0416vw;
+    }
 }
 
 .gallery__title {
@@ -930,9 +940,9 @@ body {
 .video {
     padding: 200px 0px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1920px) {
     .video {
-        padding: 16.6666vw 0px;
+        padding: 10.4166vw 0px;
     }
 }
 
@@ -968,6 +978,11 @@ body {
 
 .achievements {
     padding-bottom: 200px;
+}
+@media (max-width: 1920px) {
+    .achievements {
+        padding-bottom: 10.4166vw;
+    }
 }
 
 .achievements__container {
@@ -1021,8 +1036,37 @@ body {
 
 /* ---------------------------------------------------- */
 
+.blog {
+    padding: 0px 0px 200px 0px;
+}
+@media (max-width: 1920px) {
+    .blog {
+        padding: 0px 0px 10.4166vw 0px;
+    }
+}
+
+.blog__container {
+}
+._container {
+}
+.blog__title-block {
+}
+.title-block {
+}
+.blog__title {
+}
+.title {
+}
+
+/* ---------------------------------------------------- */
+
 .team {
-    padding: 0px 0px 204px 0px;
+    padding: 0px 0px 200px 0px;
+}
+@media (max-width: 1920px) {
+    .team {
+        padding: 0px 0px 10.4166vw 0px;
+    }
 }
 
 .team__container {
@@ -1031,15 +1075,14 @@ body {
 .team__title-block {
     margin-bottom: 212px;
 }
-
-.team__title {
-}
-@media (max-width: 1200px) {
-    .team__title {
-        margin-bottom: 17.6666vw;
+@media (max-width: 1920px) {
+    .team__title-block {
+        margin-bottom: 11.0416vw;
     }
 }
 
+.team__title {
+}
 
 .team__list {
     display: flex;
@@ -1068,17 +1111,10 @@ body {
 
 .team__foto {
     margin-bottom: 24px;
-    /* position: relative;
-    padding: 0px 0px 100% 0px; */
 }
 
 .team__foto img {
     max-width: 100%;
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; */
 }
 
 .team__text {
@@ -1111,12 +1147,22 @@ body {
     background-color: rgb(248, 248, 248);
     padding: 200px 0px;
 }
+@media (max-width: 1920px) {
+    .services {
+        padding: 10.4166vw 0px;
+    }
+}
 
 .services__container {
 }
 
 .services__title-block {
     margin-bottom: 212px;
+}
+@media (max-width: 1920px) {
+    .services__title-block {
+        margin-bottom: 11.0416vw;
+    }
 }
 
 .services__title {
