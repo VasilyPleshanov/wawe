@@ -949,43 +949,208 @@ body {
 .video__container {
 }
 
+/* --------------------------------------------------- */
 
-.video__item {
+.player {
     position: relative;
-    padding: 0px 0px 600px 0px;
+    font-size: 14px;
 }
-@media (max-width: 1200px) {
-    .video__item {
-        padding: 0px 0px 50% 0px;
+
+.player__main-icon {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    animation: show-icon 0.5s forwards;
+}
+
+@keyframes show-icon {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.4);
     }
 }
 
-.video__item video {
-    position: absolute;
-    top: 0;
-    left: 0;
+.player__video {
+    /* background-color: #000; */
     width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.player.player--fullscreen .player__video {
     height: 100%;
 }
 
-.video__btn {
+.player__panel {
     position: absolute;
-    top: 0;
+    bottom: 0;
+    right: 0;
     left: 0;
+    color: #fff;
+    padding: 0 15px 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.player--hide-interface .player__panel {
+    opacity: 0;
+}
+
+.player__lines {
+    flex: 0 0 100%;
+    height: 18px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: all 0.15s ease-in-out;
+    transition-property: top, bottom;
+}
+
+.player__hint {
+    position: absolute;
+    pointer-events: none;
+    bottom: calc(100% + 10px);
+    opacity: 0;
+    padding: 3px 6px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.15s ease-in-out;
+}
+.player__lines:hover .player__hint {
+    opacity: 1;
+}
+
+.player__line {
+    position: absolute;
+    top: 7px;
+    bottom: 7px;
+    left: 0;
+    border-radius: 5px;
+}
+.player__line:hover {
+    top: 5px;
+    bottom: 5px;
+}
+
+.player__line--full {
+    background-color: rgba(255, 255, 255, 0.1);
     width: 100%;
-    height: 100%;
+    z-index: 3;
+}
+
+.player__line--ghost {
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 4;
+    opacity: 0;
+}
+.player__lines:hover .player__line--ghost {
+    opacity: 1;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.player__line--current {
+    /* background-color: red; */
+    background-color: #fff;
+    z-index: 5;
+}
+
+.player__panel-block {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    cursor: default;
 }
 
-.video__btn img {
+.player__panel-block > *:not(:last-child) {
+    margin-right: 20px;
+}
+
+.player__panel-button {
+    outline: none;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    color: inherit;
+}
+
+.player__volume {
+    -webkit-appearance: none;
+    width: 0;
+    height: 5px;
+    margin-left: 0;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+    transition-property: width, opacity, margin-left;
+
     cursor: pointer;
 }
-.video__item.play .video__btn img {
-    visibility: hidden;
+
+.player__volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+    transition-property: background-color, width, height;
+}
+.player__volume::-webkit-slider-thumb:hover {
+    background: #fff;
+    width: 16px;
+    height: 16px;
+}
+
+.player__volume::-moz-range-thumb {
+    border: 0;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+    transition-property: background-color, width, height;
+}
+.player__volume::-moz-range-thumb:hover {
+    background: #fff;
+    width: 16px;
+    height: 16px;
+}
+
+.player__panel-button--volume {
+    display: flex;
+    align-items: center;
+}
+
+.player__panel-button--volume:hover .player__volume {
+    width: 100px;
+    opacity: 1;
+    margin-left: 20px;
+}
+
+.player__volume-icon {
+    width: 20px;
 }
 
 /* --------------------------------------------------- */
