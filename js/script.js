@@ -3,9 +3,9 @@ const menu = document.querySelector('.header__menu')
 const body = document.querySelector('body')
 const header = document.querySelector('.header')
 
-const videoItem = document.querySelector('.video__item')
-const video = document.querySelector('#video')
-const videoBtn = document.querySelector('.video__btn')
+// const videoItem = document.querySelector('.video__item')
+// const video = document.querySelector('#video')
+// const videoBtn = document.querySelector('.video__btn')
 
 // Анимация меню бургер
 burger.addEventListener('click', () => {
@@ -25,17 +25,17 @@ window.addEventListener('scroll', function(event) {
 })
 
 // Видео
-videoBtn.addEventListener('click', () => {
-    if (videoItem.classList.contains('play')) {
-        videoItem.classList.remove('play')
-        video.pause()
-    } else {
-        videoItem.classList.add('play')
-        video.play()
-    }
-})
+// videoBtn.addEventListener('click', () => {
+//     if (videoItem.classList.contains('play')) {
+//         videoItem.classList.remove('play')
+//         video.pause()
+//     } else {
+//         videoItem.classList.add('play')
+//         video.play()
+//     }
+// })
 
-video.addEventListener('pause', () => {
-    videoItem.classList.remove('play')
-})
+// video.addEventListener('pause', () => {
+//     videoItem.classList.remove('play')
+// })
 

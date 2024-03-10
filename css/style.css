@@ -37,6 +37,24 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 
+/* ---Checkpoints----------------------------------------------------------------- */
+
+/* PC */
+@media (max-width: 1087px) {
+}
+
+/* TABLET */
+@media (max-width: 991.98px) {
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+}
+
+/* MOBILE SMALL*/
+@media (max-width: 479.98px) {
+}
+
 /* ---------------------------------------------------------- */
 
 body {
@@ -1229,10 +1247,10 @@ body {
 
 .blog__container {
 }
-._container {
-}
+
 .blog__title-block {
 }
+
 .title-block {
 }
 
@@ -1254,6 +1272,12 @@ body {
 .slider {
     position: relative;
 }
+/* @media (max-width: 991.98px) {
+    .slider {
+        height: 500px;
+    }
+
+} */
 
 .slider__dots {
     position: absolute;
@@ -1262,6 +1286,11 @@ body {
     left: 50%;
     transform: translate(-50%, -0%);
     display: flex;
+}
+@media (max-width: 1920px) {
+    .slider__dots {
+        bottom: 4.0104vw;
+    }
 }
 
 .slider__dot {
@@ -1290,6 +1319,11 @@ body {
     animation-name: fade;
     animation-duration: 1s;
 }
+/* @media (max-width: 991.98px) {
+    .slider__item {
+        height: 500px;
+    }
+} */
 
 @keyframes fade {
     from {
@@ -1307,6 +1341,12 @@ body {
 .slider__item img {
     width: 100%;
 }
+@media (max-width: 767.98px) {
+    .slider__item img {
+        width: auto;
+        height: 350px;
+    }
+}
 
 .slider__text {
     position: absolute;
@@ -1314,6 +1354,19 @@ body {
     max-width: 600px;
     top: 16.3541vw;
     right: 18.75vw;
+}
+@media (max-width: 1087px) {
+    .slider__text {
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width: 767.98px) {
+    .slider__text {
+        padding: 0 10%;
+    }
 }
 
 .slider__text p {
@@ -1333,6 +1386,12 @@ body {
     line-height: 56px;
     letter-spacing: 0.6px;
     text-align: left;
+}
+@media (max-width: 767.98px) {
+    .slider__text p:first-child {
+        font-size: 24px;
+        line-height: 1.2;
+    }
 }
 
 .slider__blackout {

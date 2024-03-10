@@ -110,7 +110,6 @@ class Player {
     }
 
     setVideoDuration() {
-        console.log('log')
         const duration = Number(this.video.duration.toFixed())
         const current = Number(this.video.currentTime.toFixed())
         const newTime = `${this.formatTime(current)} / ${this.formatTime(duration)}`
